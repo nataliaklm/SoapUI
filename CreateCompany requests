@@ -1,0 +1,259 @@
+--Request CC1
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="e30d8157-f87e-4cf2-a4b9-4bd181cb95fd" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 1" searchProperties="true" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:testStep type="request" id="ebe652e5-480e-4a60-aa23-f16944048dd1" name="CreateCompany - CC1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WrapperSoapServerBinding</con:interface><con:operation>CreateCompany</con:operation><con:request name="CreateCompany - CC1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="be98690c-cd96-46a5-8483-614ba264d3e7"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://users.bugred.ru/tasks/soap/WrapperSoapServer.php</con:endpoint><con:request><![CDATA[
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wrap="http://foo.bar/wrappersoapserver" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wrap:CreateCompany>
+         <company_name>Test company 1</company_name>
+         <company_type>ООО</company_type>
+         <email_owner>manager@mail.ru</email_owner>
+           <company_users soapenc:arrayType="xsd:array[]">
+                    <item>c1@gmail.com</item>
+                    <item>c2@gmail.com</item>
+                    <item>c3@gmail.com</item>
+        </company_users>
+      </wrap:CreateCompany>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP
+
+--Request CC2
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="50b5016d-f274-47f3-8539-96252a8036fc" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 2" searchProperties="true" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:testStep type="request" id="188f3e91-daba-4107-b2b9-370ca9f1cdb9" name="CreateCompany - CC2"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WrapperSoapServerBinding</con:interface><con:operation>CreateCompany</con:operation><con:request name="CreateCompany - CC2" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="bcc234a7-eaa6-4012-a19d-430d00c7571c"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://users.bugred.ru/tasks/soap/WrapperSoapServer.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wrap="http://foo.bar/wrappersoapserver" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wrap:CreateCompany>
+         <company_name>Test company 2</company_name>
+         <company_type>ОАО</company_type>
+          <email_owner>manager@mail.ru</email_owner>
+      </wrap:CreateCompany>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="28fb436e-89ff-4b24-b899-2b6fbe262547" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://foo.bar/wrappersoapserver/#CreateCompany"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase>
+
+--Request CC3
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="4a9a7859-bbbf-4368-88ec-689b6ade3700" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 3" searchProperties="true" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:testStep type="request" id="81e49776-f083-4527-84af-25e65a3a4371" name="CreateCompany - CC3"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WrapperSoapServerBinding</con:interface><con:operation>CreateCompany</con:operation><con:request name="CreateCompany - CC3" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="7b02fcdb-ae31-4acd-b0b1-6ae7a5d906a4"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://users.bugred.ru/tasks/soap/WrapperSoapServer.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wrap="http://foo.bar/wrappersoapserver" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wrap:CreateCompany>
+         <company_name>Test company 3</company_name>
+         <company_type>ООО</company_type>
+           <company_users soapenc:arrayType="xsd:array[]">
+                    <item>b1@gmail.com</item>
+                    <item>b2@gmail.com</item>
+                    <item>b3@gmail.com</item>
+        </company_users>
+      </wrap:CreateCompany>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="3a880bcc-72fa-4fef-b435-83f8205a2798" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://foo.bar/wrappersoapserver/#CreateCompany"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase>
+
+--Request CC4
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="d7c7954e-16bb-4e7b-b0a7-c71630a52670" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 4" searchProperties="true" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:testStep type="request" id="1a6cfd54-0f29-4052-8098-561b7817eb4e" name="CreateCompany - CC4"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WrapperSoapServerBinding</con:interface><con:operation>CreateCompany</con:operation><con:request name="CreateCompany - CC4" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="8bf17b17-03b3-465a-96ff-5385356468f2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://users.bugred.ru/tasks/soap/WrapperSoapServer.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wrap="http://foo.bar/wrappersoapserver" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wrap:CreateCompany>
+         <company_name>Test company 4</company_name>
+         <email_owner>manager@mail.ru</email_owner>
+           <company_users soapenc:arrayType="xsd:array[]">
+                    <item>a1@gmail.com</item>
+                    <item>a2@gmail.com</item>
+                    <item>a3@gmail.com</item>
+        </company_users>
+      </wrap:CreateCompany>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="7901068a-974f-481b-bc12-eac6d16e5c7a" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://foo.bar/wrappersoapserver/#CreateCompany"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase>
+
+--Request CC5
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="b8729d7d-c94d-46bb-9707-ee7baac91361" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 5" searchProperties="true" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:testStep type="request" id="92ce4cd0-7aaa-496a-94bc-f199e3faa0f7" name="CreateCompany - CC5"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WrapperSoapServerBinding</con:interface><con:operation>CreateCompany</con:operation><con:request name="CreateCompany - CC5" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b4bb69bb-4337-47f8-8642-73b033c63c27"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://users.bugred.ru/tasks/soap/WrapperSoapServer.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wrap="http://foo.bar/wrappersoapserver" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wrap:CreateCompany>
+         <email_owner>manager@mail.ru</email_owner>
+           <company_users soapenc:arrayType="xsd:array[]">
+                    <item>d1@gmail.com</item>
+                    <item>d2@gmail.com</item>
+                    <item>d3@gmail.com</item>
+        </company_users>
+      </wrap:CreateCompany>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="2b45f6a9-0530-4d94-af41-e50966e3aed2" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://foo.bar/wrappersoapserver/#CreateCompany"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase>
+
+--Request CC6
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="867f197c-61a8-4c2e-b25f-7a85cbd1381b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 6" searchProperties="true" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:testStep type="request" id="053c633b-a478-48e8-820f-c50145f49487" name="CreateCompany - CC6"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WrapperSoapServerBinding</con:interface><con:operation>CreateCompany</con:operation><con:request name="CreateCompany - CC6" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="7f665884-a9ae-457c-91de-8760128964b6"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://users.bugred.ru/tasks/soap/WrapperSoapServer.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wrap="http://foo.bar/wrappersoapserver" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wrap:CreateCompany>
+         <company_name>Test company 6</company_name>
+      </wrap:CreateCompany>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="b78d4df0-e3a5-41cc-8c37-7936f3ffcf94" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://foo.bar/wrappersoapserver/#CreateCompany"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase>
+
+--Request CC7
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="3dc4c534-b9ed-484f-a214-ae1c4939a067" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 7" searchProperties="true" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:testStep type="request" id="d5c8193f-fd56-4b12-93bf-75ad749b9625" name="CreateCompany - CC7"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WrapperSoapServerBinding</con:interface><con:operation>CreateCompany</con:operation><con:request name="CreateCompany - CC7" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="7b087310-5642-42a9-9380-1e8571d4a2f0"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://users.bugred.ru/tasks/soap/WrapperSoapServer.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wrap="http://foo.bar/wrappersoapserver" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wrap:CreateCompany>
+         <company_type>OOO</company_type>
+      </wrap:CreateCompany>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1e6836b5-c133-4308-8381-72a70a23b878" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://foo.bar/wrappersoapserver/#CreateCompany"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase>
+
+--Request CC8
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="c6ad936c-6f2c-4fa7-9e87-8e26f0cb0f20" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 8" searchProperties="true" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:testStep type="request" id="b8acad0d-66fb-498f-87d3-cd343e5cbc96" name="CreateCompany - CC8"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WrapperSoapServerBinding</con:interface><con:operation>CreateCompany</con:operation><con:request name="CreateCompany - CC8" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="ca978ea7-1ceb-4ddf-8612-9ab73009593b"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://users.bugred.ru/tasks/soap/WrapperSoapServer.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wrap="http://foo.bar/wrappersoapserver" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wrap:CreateCompany>
+         <email_owner>manager@mail.ru</email_owner>
+      </wrap:CreateCompany>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="36d7aa95-cdd9-47b8-a5b4-b65fd2e8790f" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://foo.bar/wrappersoapserver/#CreateCompany"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase>
+
+--Request CC9
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="c040ed66-d684-4ec0-811d-08cfa9ff5428" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 9" searchProperties="true" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:testStep type="request" id="4d7d3f9a-2d43-4c9c-b929-cc8fcf5730c5" name="CreateCompany - CC9"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WrapperSoapServerBinding</con:interface><con:operation>CreateCompany</con:operation><con:request name="CreateCompany - CC9" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="c2c4b303-8e1f-4f46-ab5d-a47a2bcede8e"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://users.bugred.ru/tasks/soap/WrapperSoapServer.php</con:endpoint><con:request><![CDATA[
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wrap="http://foo.bar/wrappersoapserver" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wrap:CreateCompany>
+           <company_users soapenc:arrayType="xsd:array[]">
+                    <item>e1@gmail.com</item>
+                    <item>e2@gmail.com</item>
+                    <item>e3@gmail.com</item>
+        </company_users>
+      </wrap:CreateCompany>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="10c67280-715b-4d28-9674-c2461df2e29b" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://foo.bar/wrappersoapserver/#CreateCompany"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase>
+
+--Request CC10
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="0c8a0e18-47ea-4adb-8bb6-a3bdf957debc" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 10" searchProperties="true" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:testStep type="request" id="e5aae75c-6c80-4615-bdf9-3b2544d2d104" name="CreateCompany - CC10"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WrapperSoapServerBinding</con:interface><con:operation>CreateCompany</con:operation><con:request name="CreateCompany - CC10" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="750cb19b-3f60-41bb-b03b-e94ae1e11bc4"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://users.bugred.ru/tasks/soap/WrapperSoapServer.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wrap="http://foo.bar/wrappersoapserver" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wrap:CreateCompany>
+         <company_name>Test company 7</company_name>
+         <company_type>LLC</company_type>
+         <email_owner>manager@mail.ru</email_owner>
+           <company_users soapenc:arrayType="xsd:array[]">
+                    <item>f1@gmail.com</item>
+                    <item>f2@gmail.com</item>
+                    <item>f3@gmail.com</item>
+        </company_users>
+      </wrap:CreateCompany>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="6841ec34-b85c-41b1-a4ba-5850ae323764" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://foo.bar/wrappersoapserver/#CreateCompany"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase>
+
+--Request CC11
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="de139e4e-eac7-47ae-b4d8-4d0b3a0a2967" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 11" searchProperties="true" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:testStep type="request" id="0ec3bc8b-b723-447f-aa20-228e65384faa" name="CreateCompany - CC11"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WrapperSoapServerBinding</con:interface><con:operation>CreateCompany</con:operation><con:request name="CreateCompany - CC11" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b532b799-f0a7-40b2-a3e7-30ad59eec9bd"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://users.bugred.ru/tasks/soap/WrapperSoapServer.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wrap="http://foo.bar/wrappersoapserver" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wrap:CreateCompany>
+         <company_name>Test company 8</company_name>
+         <company_type>ИП</company_type>
+         <email_owner>f3@gmail.com</email_owner>
+           <company_users soapenc:arrayType="xsd:array[]">
+                    <item>g1@gmail.com</item>
+                    <item>g2@gmail.com</item>
+                    <item>g3@gmail.com</item>
+        </company_users>
+      </wrap:CreateCompany>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="e7d4d17d-f806-4e99-9457-aa0885f42a0d" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://foo.bar/wrappersoapserver/#CreateCompany"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase>
+
+--Request CC12
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="8c332e0c-64aa-4452-8328-ab79b183828c" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 12" searchProperties="true" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:testStep type="request" id="6b2690e5-a18d-4ee4-a010-01700b81e784" name="CreateCompany - CC12"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WrapperSoapServerBinding</con:interface><con:operation>CreateCompany</con:operation><con:request name="CreateCompany - CC12" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="ba7f26b3-501a-4a9e-9a57-45f5ef7ad983"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://users.bugred.ru/tasks/soap/WrapperSoapServer.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wrap="http://foo.bar/wrappersoapserver" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wrap:CreateCompany>
+         <company_name>Test company 9</company_name>
+         <company_type>OOO</company_type>
+         <email_owner>xyz100@yahoo.com</email_owner>
+           <company_users soapenc:arrayType="xsd:array[]">
+                    <item>h1@gmail.com</item>
+                    <item>h2@gmail.com</item>
+                    <item>h3@gmail.com</item>
+        </company_users>
+      </wrap:CreateCompany>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="8b79a1c1-47ef-4f46-8fbf-5320581c5550" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://foo.bar/wrappersoapserver/#CreateCompany"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase>
+
+--Request CC13
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="1d17e8f3-3718-4c20-acc8-d4e72c802157" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 13" searchProperties="true" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:testStep type="request" id="0ff80f1c-29a9-4766-a9aa-2e99ff8b8e4a" name="CreateCompany - CC13"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WrapperSoapServerBinding</con:interface><con:operation>CreateCompany</con:operation><con:request name="CreateCompany - CC13" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="6792a932-0adf-4812-a552-0dddc3b1dc10"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://users.bugred.ru/tasks/soap/WrapperSoapServer.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wrap="http://foo.bar/wrappersoapserver" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wrap:CreateCompany>
+         <company_name>Test company 10</company_name>
+         <company_type>ООО</company_type>
+         <email_owner>manager@mail.ru</email_owner>
+           <company_users soapenc:arrayType="xsd:array[]">
+                    <item>aaa1@gmail.com</item>
+                    <item>bbb1@gmail.com</item>
+                    <item>ccc1@gmail.com</item>
+        </company_users>
+      </wrap:CreateCompany>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="f3c79710-92d3-455b-8096-6bf3a0a70d1e" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://foo.bar/wrappersoapserver/#CreateCompany"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase>
+
+--Request CC14
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="bc66ab52-bb29-4733-93a5-383093bf3030" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 14" searchProperties="true" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:testStep type="request" id="0016ca84-557a-49c4-8e23-f6186026d5a0" name="CreateCompany - CC14"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WrapperSoapServerBinding</con:interface><con:operation>CreateCompany</con:operation><con:request name="CreateCompany - CC14" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="26be489d-b3b9-46c0-8bc0-ffbd6f081535"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://users.bugred.ru/tasks/soap/WrapperSoapServer.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wrap="http://foo.bar/wrappersoapserver" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wrap:CreateCompany>
+         <company_name>Test company 11</company_name>
+         <company_type>OOO</company_type>
+         <email_owner>manager</email_owner>
+           <company_users soapenc:arrayType="xsd:array[]">
+                    <item>a1@gmail.com</item>
+                    <item>b1@gmail.com</item>
+                    <item>c1@gmail.com</item>
+        </company_users>
+      </wrap:CreateCompany>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="0e3ff7f1-f2b2-4bea-9939-d35ae2bf2b83" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://foo.bar/wrappersoapserver/#CreateCompany"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase>
+
+--Request CC15
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="733d6990-5bae-4574-bedc-23921b1f69f4" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 15" searchProperties="true" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:testStep type="request" id="1391cfb4-4671-4d20-ac7f-e4e96620d258" name="CreateCompany - CC15"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WrapperSoapServerBinding</con:interface><con:operation>CreateCompany</con:operation><con:request name="CreateCompany - CC15" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="fe36de95-a3eb-4710-9ea1-c9020657d235"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://users.bugred.ru/tasks/soap/WrapperSoapServer.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wrap="http://foo.bar/wrappersoapserver" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wrap:CreateCompany>
+         <company_name>Test company 12</company_name>
+         <company_type>ИП</company_type>
+         <email_owner>manager@mail.ru</email_owner>
+           <company_users soapenc:arrayType="xsd:array[]">
+                    <item>a1</item>
+                    <item>b1</item>
+                    <item>c1</item>
+        </company_users>
+      </wrap:CreateCompany>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="61a498d4-5db2-4546-a527-c6d2d3b227e0" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://foo.bar/wrappersoapserver/#CreateCompany"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase>
+
+--Request CC16
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="5446a3ac-ed84-45d4-ad96-1036597336ff" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 16" searchProperties="true" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:testStep type="request" id="a8ab5589-3c6b-48a7-8431-c23a2782d79c" name="CreateCompany -CC16"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WrapperSoapServerBinding</con:interface><con:operation>CreateCompany</con:operation><con:request name="CreateCompany -CC16" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="30b48e2f-44fe-4504-9835-f832ca2f7fe7"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://users.bugred.ru/tasks/soap/WrapperSoapServer.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wrap="http://foo.bar/wrappersoapserver" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wrap:CreateCompany>
+         <company_name></company_name>
+         <company_type></company_type>
+         <email_owner></email_owner>
+           <company_users soapenc:arrayType="xsd:array[]">
+                    <item></item>
+                    <item></item>
+                    <item></item>
+        </company_users>
+      </wrap:CreateCompany>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="4b6da153-e9af-4d1d-8bdd-e6200ef7d8ea" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://foo.bar/wrappersoapserver/#CreateCompany"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase>
+
+
+
