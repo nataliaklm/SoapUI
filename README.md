@@ -1,5 +1,4 @@
 # SoapUI
----
 This repository contains SoapUI collection of requests made within New Company Creation functionality testing (CreateCompany method).
 
 Notes:
